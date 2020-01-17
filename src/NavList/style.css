@@ -1,0 +1,20 @@
+* {
+    font-family: sans-serif;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 5px;
+    padding: 7px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+nav ul li:hover {
+    background-color: #ECEEED;
+}
