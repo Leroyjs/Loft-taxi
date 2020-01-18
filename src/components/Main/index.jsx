@@ -1,17 +1,20 @@
 import React, {Component} from 'react'
+import Login from '../Login'
+import Map from '../Map'
+import Profile from '../Profile'
 
 class Main extends Component {
     render(){
-        let body = <h1>MAP</h1>
+        let body;
         switch(this.props.page) {
             case 'map': 
-                body = <h1>MAP</h1>
+                body = <Map></Map>
                 break;
             case 'profile': 
-                body = <h1>PROFILE</h1>
+                body = <Profile></Profile>
                 break;
             case 'login': 
-                body = <h1>LOGIN</h1>
+                body = <Login page={this.props.page} changePage={this.props.changePage}></Login>
                 break;
             default:
                 body = null;
