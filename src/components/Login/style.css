@@ -1,0 +1,31 @@
+.login{
+	width: 100%;
+	height: 100vh;
+	background-image: url(login-bg.png);
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	justify-content: space-around;
+}
+.login__logo{
+	width: 157px;
+	height: 37px;
+	position: absolute;
+	animation:anim 1s;
+	animation-duration:1s;
+}
+@keyframes anim {
+	from {left:-50vw;}
+	to {left:0;}
+}
+.login__logo-box{
+	position: relative;
+}

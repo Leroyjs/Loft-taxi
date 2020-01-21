@@ -1,0 +1,106 @@
+.reg-form {
+    width: 503px;
+    height: 566px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 52px;
+}
+
+.reg-form h2 {
+    margin: 0;
+    color: #323232;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.reg-form__button {
+    width: 248px;
+    height: 51px;
+    border-radius: 4px;
+    border: none;
+    background-color: #ffc617;
+    align-self: flex-end;
+    font-size: 21px;
+    font-weight: 400;
+    outline: 0;
+    cursor: pointer;
+    transition: .2s
+}
+
+.reg-form__button:hover {
+    background-color: #B28A10;
+}
+
+.reg-form__input-box {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+}
+
+.reg-form__input-box_half {
+    width: 50%;
+}
+
+.reg-form__double-input-box {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+}
+
+.reg-form__input-box span {
+    color: #747474;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.reg-form__input-box input {
+    margin: 1px;
+    height: 34px;
+    color: #323232;
+    font-size: 16px;
+    font-weight: 400;
+    border: none;
+    outline: 0;
+    border-bottom: 2px solid #eaeaea;
+    transition: .15s;
+}
+
+.reg-form__input-box input:focus {
+    border-bottom: 2px solid #1473e6;
+}
+
+.reg-form__new {
+    font-size: 16px;
+    font-weight: 400;
+    color: #505050;
+}
+
+.reg-form__new_blue {
+    color: #1473e6;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.reg-form__new_blue:hover {
+    text-decoration: underline;
+}
