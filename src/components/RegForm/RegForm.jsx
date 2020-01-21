@@ -11,12 +11,13 @@ export default class RegForm extends React.Component{
         const {changeForm} = this.props
 
         changeForm(form);
+        e.preventDefault();
     }
     render(){    
         return ( 
         <div className="reg-form">
             <h2>Регистрация</h2>
-            <span className="reg-form__new">Уже зарегистрирован?<span onClick={this.handleClickForm("log")}  className="reg-form__new_blue">Войти</span></span>
+            <span className="reg-form__new">Уже зарегистрирован?<a href="#" onClick={this.handleClickForm("log")}  className="reg-form__new_blue">Войти</a></span>
             <div className="reg-form__input-box">
                 <span>Адрес электронной почты</span>
                 <input type="text"/>

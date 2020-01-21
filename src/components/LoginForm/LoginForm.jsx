@@ -11,12 +11,13 @@ export default class LoginForm extends React.Component{
         const {changeForm} = this.props
 
         changeForm(form);
+        e.preventDefault();
     }
     render(){    
         return ( 
         <div className="login-form">
             <h2>Войти</h2>
-            <span className="login-form__new">Новый пользователь? <span onClick={this.handleClickForm("reg")} className="login-form__new_blue">Зарегистрируйтесь</span></span>
+            <span className="login-form__new">Новый пользователь? <a href="#" onClick={this.handleClickForm("reg")} className="login-form__new_blue">Зарегистрируйтесь</a></span>
             <div className="login-form__input-box">
                 <span>Имя пользователя*</span>
                 <input type="text"/>

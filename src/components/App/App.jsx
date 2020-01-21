@@ -8,7 +8,7 @@ export default class App extends Component{
     }
     changePageHandler = (page) =>{
         this.setState({
-            page:page
+            page
         })
     }
 
