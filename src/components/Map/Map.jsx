@@ -1,10 +1,34 @@
 import React from 'react'
-import './style.css'
+import mapboxgl from 'mapbox-gl';
 
-function Map() {
-    return ( 
-        <div className="map"></div>
-    )
-}
+export default class Map extends React.Component {
+    constructor(props){
+      super(props);
+      this.mapContainer = React.createRef();
+    }
 
-export default Map
+    componentDidMount() {
+      console.log(this.mapContainer.current);
+      this.map = new mapboxgl.Map({
+        container: this.mapContainer.current,
+        style: 'mapbox://styles/mapbox/streets-v9'
+      });
+    }
+    
+    componentWillUnmount() {
+      this.map.remove();
+    }
+  
+    render() {
+
+      const style = {
+        position: 'absolute',
+        top: 0,
+        bottom: 0,
+        width: '100%'
+      };
+  
+      return <div style={style} ref={this.mapContainer} />;
+    }
+  }
+  
