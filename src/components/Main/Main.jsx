@@ -2,8 +2,15 @@ import React, {Component} from 'react'
 import Login from '../Login'
 import Map from '../Map'
 import Profile from '../Profile'
+import PropTypes from 'prop-types'
+import {AuthConsumer} from '../../contexts/Auth'
 
 class Main extends Component {
+    static propTypes = {
+        changePage: PropTypes.func.isRequired,
+        page: PropTypes.string.isRequired,
+    }
+
     render(){
         let body;
         switch(this.props.page) {
@@ -13,17 +20,20 @@ class Main extends Component {
             case 'profile': 
                 body = <Profile></Profile>
                 break;
-            case 'login': 
-                body = <Login page={this.props.page} changePage={this.props.changePage}></Login>
-                break;
             default:
-                body = null;
+                body = <Map></Map>;
                 break;
           }
         return (
-            <main>
-                {body}
-            </main>
+            <AuthConsumer>
+            {(authContext) =>{
+                return (
+                        <main>
+                            {authContext.isLoggedIn ? body : <Login></Login> }
+                        </main>
+                    )
+                }}
+            </AuthConsumer>
         )
     }
 }

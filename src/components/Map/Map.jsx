@@ -8,10 +8,12 @@ export default class Map extends React.Component {
     }
 
     componentDidMount() {
-      console.log(this.mapContainer.current);
+      mapboxgl.accessToken = "pk.eyJ1IjoibGVyb3lqcyIsImEiOiJjazVyd3NudWMwN2xtM2tud2g2bHNxMWF0In0.oEY3_if4FnRim8tQNlJlAA";
       this.map = new mapboxgl.Map({
         container: this.mapContainer.current,
-        style: 'mapbox://styles/mapbox/streets-v9'
+        style: 'mapbox://styles/mapbox/streets-v9',
+        center: [60.6122000, 56.8519000],
+        zoom: 11
       });
     }
     

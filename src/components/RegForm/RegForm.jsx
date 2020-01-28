@@ -1,7 +1,12 @@
 import React from 'react'
 import './style.css'
+import PropTypes from 'prop-types'
 
 export default class RegForm extends React.Component{
+    static propTypes = {
+        changeForm: PropTypes.func.isRequired,
+    }
+
     handleClick = page => e => {
         const {changePage} = this.props
 

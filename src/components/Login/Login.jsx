@@ -18,7 +18,7 @@ export default class Login extends React.Component{
             <div className="login__logo-box">
               <img src="login-logo.svg" alt="Logo" className="login__logo"/>
             </div>
-            {this.state.form === 'log'?<LoginForm changeForm={this.changeFormHandler} changePage={this.props.changePage}></LoginForm>:<RegForm  changeForm={this.changeFormHandler} changePage={this.props.changePage}></RegForm>}
+            {this.state.form === 'log'?<LoginForm changeForm={this.changeFormHandler}></LoginForm>:<RegForm  changeForm={this.changeFormHandler}></RegForm>}
         </div>
     )
     }
