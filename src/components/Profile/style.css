@@ -1,0 +1,7 @@
+.profile {
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-image: url('./42-layers.png');
+    background-position: 0 0;
+    background-size: cover;
+}
