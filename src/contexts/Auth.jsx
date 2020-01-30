@@ -1,55 +1,55 @@
 import React, { PureComponent } from 'react';
 
-const { Provider, Consumer:AuthConsumer } = React.createContext();
+const { Provider, Consumer: AuthConsumer } = React.createContext();
 const user = {
-    email: "test@test.ru",
-    password: "test"
-}
+    email: 'test@test.ru',
+    password: 'test'
+};
 
 class AuthProvider extends PureComponent {
     state = {
         isLoggedIn: false,
-        email: "",
-        authError: "error",
-    }
-    login = (email, password) =>{
-        if (email === user.email && password === user.password){
+        email: '',
+        authError: ''
+    };
+    login = (email, password) => {
+        if (email === user.email && password === user.password) {
             this.setState({
                 email,
                 isLoggedIn: true,
-                authError: "",
+                authError: ''
             });
-        }else{
+        } else {
             this.setState({
-                authError: "Email или пароль указан неправильно",
-            })
+                authError: 'Email или пароль указан неправильно'
+            });
         }
-        console.log(this.state)
-    }
+        console.log(this.state);
+    };
 
-    logout = () =>{
+    logout = () => {
         this.setState({
-            isLoggedIn: false,
+            isLoggedIn: false
         });
-    }
+    };
 
-    getProviderValue = () =>{
+    getProviderValue = () => {
         const { isLoggedIn, email, authError } = this.state;
 
-        return{
+        return {
             isLoggedIn,
             email,
             authError,
             login: this.login,
-            logout: this.logout,
-        }
-    }
+            logout: this.logout
+        };
+    };
 
-    render(){
-        const {children} = this.props
+    render() {
+        const { children } = this.props;
 
-        return <Provider value={this.getProviderValue()}>{children}</Provider>
+        return <Provider value={this.getProviderValue()}>{children}</Provider>;
     }
 }
 
-export {AuthProvider, AuthConsumer};
+export { AuthProvider, AuthConsumer };
